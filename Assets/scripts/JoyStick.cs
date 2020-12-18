@@ -9,7 +9,7 @@ public class JoyStick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     Transform m_trCube;
     float m_fRadius;
-    float m_fSpeed = 5.0f;
+    float m_fSpeed = 1.0f;
     float m_fSqr = 0f;
 
     Vector3 m_vecMove;
