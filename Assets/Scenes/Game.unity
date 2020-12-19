@@ -5782,10 +5782,16 @@ PolygonCollider2D:
       - {x: 25.995878, y: 9.257966}
       - {x: 33.353203, y: 9.257966}
       - {x: 33.353203, y: 11.751282}
-    - - {x: -22.603334, y: 20.334826}
+    - - {x: -21.553888, y: 20.334826}
+      - {x: -21.545238, y: 18.623753}
       - {x: -37.971966, y: 18.413748}
       - {x: -37.971966, y: 15.920432}
-      - {x: 30.16503, y: 15.920432}
+      - {x: -21.429512, y: 15.920433}
+      - {x: -21.408827, y: 17.978218}
+      - {x: 9.644777, y: 17.948566}
+      - {x: 9.65052, y: 15.978647}
+      - {x: 27.958336, y: 15.926695}
+      - {x: 27.97998, y: 17.848963}
       - {x: 37.154488, y: 17.92326}
       - {x: 37.154488, y: 20.334826}
 --- !u!1 &1162399742
@@ -6482,6 +6488,7 @@ GameObject:
   - component: {fileID: 1242676514}
   - component: {fileID: 1242676513}
   - component: {fileID: 1242676515}
+  - component: {fileID: 1242676516}
   m_Layer: 0
   m_Name: disposalInteract
   m_TagString: Untagged
@@ -6579,6 +6586,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.85, y: 0.72576773}
   m_EdgeRadius: 0
+--- !u!114 &1242676516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242676512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529351d951c7b614f94f5b082962c695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!1 &1258021588
 GameObject:
   m_ObjectHideFlags: 0
