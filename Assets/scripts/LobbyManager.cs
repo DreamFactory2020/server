@@ -88,6 +88,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom() //룸 참가 성공 시 자동 실행
     {
         ConnectText.text = "방참가 성공";
+        PhotonNetwork.LocalPlayer.NickName = Name.text;
         PhotonNetwork.LoadLevel("Game");    //모든 참가자가 Game씬을 로드한다.
     }
     public void Disconnect()    //메인창으로 돌아가기
