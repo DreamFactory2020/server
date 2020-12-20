@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
         new Color(255,0,236)
     };
 
+    public Button GameStartBtn;
+    public GameObject StartWall1;
+    public GameObject StartWall2;
+    public GameObject StartWall3;
+    public GameObject StartWall4;
+    public Text StartText;
     public Text NumOfPlayersText;
-    public static GameManager instance
-    {
-        get
-        {
+    public static GameManager instance{
+        get{
             // 만약 싱글톤 변수에 아직 오브젝트가 할당되지 않았다면
             if (m_instance == null)
             {
@@ -43,7 +47,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-        MyPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0f, 0f), Quaternion.identity, 0).GetComponent<PlayerScript>();
+        MyPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(-2500, 550, 0f), Quaternion.identity, 0).GetComponent<PlayerScript>();
+        GameStartBtn.interactable = false;
     }
 
     // 주기적으로 자동 실행되는, 동기화 메서드
@@ -52,14 +57,11 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
         // 로컬 오브젝트라면 쓰기 부분이 실행됨
         if (stream.IsWriting)
         {
-   
         }
         else
         {
-            
         }
     }
-
 
     private void Awake()
     {
@@ -75,11 +77,17 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     void Update()
     {
         NumOfPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount + "/8";
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 8)
+            GameStartBtn.interactable = true;
     }
 
-    bool CheckAllPlayersAreIn() {
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 8) return true;
-        else return false;
+    public void GameStart() {
+        StartWall1.SetActive(false);
+        StartWall2.SetActive(false);
+        StartWall3.SetActive(false);
+        StartWall4.SetActive(false);
+        StartText.gameObject.SetActive(true);
+        Destroy(StartText, 2);
     }
 
     public void InitGame() {
