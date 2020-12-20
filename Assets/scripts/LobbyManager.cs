@@ -14,7 +14,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public InputField RoomName;
     public Button SearchRBtn;
     public Button BackHomeBtn;
+    public static LobbyManager instance;
 
+    void Awake() {
+        instance = this;
+    }
 
     private void Start()
     {

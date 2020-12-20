@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9eec334d4b7434184936a6a3f5e82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 150
 --- !u!114 &4792144993660867321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +351,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PV: {fileID: 9043587594792169267}
+  SR: {fileID: 5096473600686639728}
   NickNameText: {fileID: 7651234730449596178}
+  ColorSet: []
 --- !u!1 &7797114619810098486
 GameObject:
   m_ObjectHideFlags: 0

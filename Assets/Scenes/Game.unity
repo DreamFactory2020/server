@@ -564,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC0C1\uD638\uC791\uC6A9"
+  m_Text: "\uAC8C\uC784\uC2DC\uC791"
 --- !u!222 &93993398
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4953,6 +4953,7 @@ GameObject:
   - component: {fileID: 1072638668}
   - component: {fileID: 1072638667}
   - component: {fileID: 1072638670}
+  - component: {fileID: 1072638671}
   m_Layer: 5
   m_Name: InteractBtn
   m_TagString: Untagged
@@ -5022,7 +5023,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1072638668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: be7ccecc4297f6b49ac1f88ec79c92f5, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1072638668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5070,6 +5082,18 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd89c8a72191370439fe19ebe10d054a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1072638671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072638665}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3a6782354a65bb4e8e4f954c5f7913a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1086252252
@@ -5306,6 +5330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7ccecc4297f6b49ac1f88ec79c92f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumOfPlayersText: {fileID: 1046946865}
+  Players: []
+  MyPlayer: {fileID: 0}
   playerPrefab: {fileID: 4792144993660867327, guid: 0b4563bcf5d1ed7449e7a3635d53b5a8,
     type: 3}
 --- !u!4 &1090839846

@@ -1,14 +1,25 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
 {
-    public Text NumOfPlayersText;
+    Color[] ColorSet = {
+        new Color(255,0,0),
+        new Color(255,127,0),
+        new Color(248,225,0),
+        new Color(0,248,0),
+        new Color(0,246,199),
+        new Color(0,111,248),
+        new Color(101,0,247),
+        new Color(255,0,236)
+    };
 
+    public Text NumOfPlayersText;
     public static GameManager instance
     {
         get
@@ -25,11 +36,14 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     }
     private static GameManager m_instance;
 
+    public List<PlayerScript> Players = new List<PlayerScript>();
+    public PlayerScript MyPlayer;
+
     public GameObject playerPrefab; // 생성할 플레이어 캐릭터 프리팹
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0f, 0f), Quaternion.identity, 0);
+        MyPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0f, 0f), Quaternion.identity, 0).GetComponent<PlayerScript>();
     }
 
     // 주기적으로 자동 실행되는, 동기화 메서드
@@ -60,11 +74,50 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        CheckPlayer();
-    }
-    void CheckPlayer() {
         NumOfPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount + "/8";
     }
+
+    bool CheckAllPlayersAreIn() {
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 8) return true;
+        else return false;
+    }
+
+    public void InitGame() {
+        SetPlayerColor();
+        SetNote();
+    }
+
+    void SetPlayerColor() { //플레이어 컬러 랜덤 배정
+        Color[] tempColor = ColorSet;
+        ShuffleArray(tempColor);
+        for (int index = 0; index < Players.Count; index++) {
+            Players[index].SetColor(tempColor[index]);
+        }
+    }
+
+    public static void ShuffleArray<Color>(Color[] array)
+    {
+        int random1;
+        int random2;
+
+        Color tmp;
+
+        for (int index = 0; index < array.Length; ++index)
+        {
+            random1 = UnityEngine.Random.Range(0, array.Length);
+            random2 = UnityEngine.Random.Range(0, array.Length);
+
+            tmp = array[random1];
+            array[random1] = array[random2];
+            array[random2] = tmp;
+        }
+    }
+
+    void SetNote()  // 쪽지 내용 초기화, 위치 초기화
+    {
+        
+    }
+
     [ContextMenu("정보")]
     void Info()
     {
