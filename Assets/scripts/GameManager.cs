@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
 
     public List<PlayerScript> Players = new List<PlayerScript>();
     public PlayerScript MyPlayer;
+    PhotonView PV;
 
     public GameObject playerPrefab; // 생성할 플레이어 캐릭터 프리팹
     // Start is called before the first frame update
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     {
         MyPlayer = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(-2500, 550, 0f), Quaternion.identity, 0).GetComponent<PlayerScript>();
         GameStartBtn.interactable = false;
+        PV = photonView;
     }
 
     // 주기적으로 자동 실행되는, 동기화 메서드
@@ -85,6 +87,11 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     }
 
     public void GameStart() {
+        PV.RPC("GameStartRPC", RpcTarget.AllViaServer);
+    }
+
+    [PunRPC]
+    void GameStartRPC() {
         StartWall1.SetActive(false);
         StartWall2.SetActive(false);
         StartWall3.SetActive(false);

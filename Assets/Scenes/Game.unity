@@ -1517,6 +1517,7 @@ GameObject:
   - component: {fileID: 323073433}
   - component: {fileID: 323073432}
   - component: {fileID: 323073434}
+  - component: {fileID: 323073435}
   m_Layer: 0
   m_Name: StartWall4
   m_TagString: Untagged
@@ -1614,6 +1615,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 3.06}
   m_EdgeRadius: 0
+--- !u!50 &323073435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323073431}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &400235545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2607,7 @@ GameObject:
   - component: {fileID: 501569155}
   - component: {fileID: 501569154}
   - component: {fileID: 501569156}
+  - component: {fileID: 501569157}
   m_Layer: 0
   m_Name: StartWall1
   m_TagString: Untagged
@@ -2682,6 +2705,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 3.06}
   m_EdgeRadius: 0
+--- !u!50 &501569157
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501569153}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &518151798
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,6 +4872,7 @@ GameObject:
   - component: {fileID: 1029519307}
   - component: {fileID: 1029519306}
   - component: {fileID: 1029519308}
+  - component: {fileID: 1029519309}
   m_Layer: 0
   m_Name: StartWall2
   m_TagString: Untagged
@@ -4925,6 +4970,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 3.06}
   m_EdgeRadius: 0
+--- !u!50 &1029519309
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029519305}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1034550554
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6146,7 @@ GameObject:
   - component: {fileID: 1153284727}
   - component: {fileID: 1153284726}
   - component: {fileID: 1153284728}
+  - component: {fileID: 1153284729}
   m_Layer: 0
   m_Name: WallCrash
   m_TagString: Untagged
@@ -6291,6 +6358,27 @@ PolygonCollider2D:
       - {x: 27.97998, y: 17.848963}
       - {x: 37.154488, y: 17.92326}
       - {x: 37.154488, y: 20.334826}
+--- !u!50 &1153284729
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153284725}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1162399742
 GameObject:
   m_ObjectHideFlags: 0
@@ -9553,6 +9641,7 @@ GameObject:
   - component: {fileID: 1767784068}
   - component: {fileID: 1767784067}
   - component: {fileID: 1767784069}
+  - component: {fileID: 1767784070}
   m_Layer: 0
   m_Name: StartWall3
   m_TagString: Untagged
@@ -9650,6 +9739,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 3.06}
   m_EdgeRadius: 0
+--- !u!50 &1767784070
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767784066}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1789080743
 GameObject:
   m_ObjectHideFlags: 0
