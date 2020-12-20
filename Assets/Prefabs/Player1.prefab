@@ -112,12 +112,11 @@ GameObject:
   - component: {fileID: 9043587594792169267}
   - component: {fileID: 3919278976674597120}
   - component: {fileID: 4792144993660867303}
-  - component: {fileID: 4792144993660867300}
   - component: {fileID: 4792144993660867302}
-  - component: {fileID: 4792144993660867323}
   - component: {fileID: 4792144993660867321}
   - component: {fileID: 8997927490568262233}
   - component: {fileID: 9072032617346517228}
+  - component: {fileID: 4613060913817094842}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -250,32 +249,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4792144993660867300
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4792144993660867327}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
-    newSize: {x: 10, y: 10}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 7, y: 7}
-  m_EdgeRadius: 0
 --- !u!95 &4792144993660867302
 Animator:
   serializedVersion: 3
@@ -295,19 +268,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4792144993660867323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4792144993660867327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac9eec334d4b7434184936a6a3f5e82c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 150
 --- !u!114 &4792144993660867321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 0
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: walk
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -353,7 +316,24 @@ MonoBehaviour:
   PV: {fileID: 9043587594792169267}
   SR: {fileID: 5096473600686639728}
   NickNameText: {fileID: 7651234730449596178}
-  ColorSet: []
+  AN: {fileID: 4792144993660867302}
+  speed: 120
+--- !u!70 &4613060913817094842
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792144993660867327}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1, y: 0.3}
+  m_Size: {x: 6.5, y: 6}
+  m_Direction: 0
 --- !u!1 &7797114619810098486
 GameObject:
   m_ObjectHideFlags: 0
