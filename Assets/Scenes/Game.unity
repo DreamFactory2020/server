@@ -4952,8 +4952,6 @@ GameObject:
   - component: {fileID: 1072638669}
   - component: {fileID: 1072638668}
   - component: {fileID: 1072638667}
-  - component: {fileID: 1072638670}
-  - component: {fileID: 1072638671}
   m_Layer: 5
   m_Name: InteractBtn
   m_TagString: Untagged
@@ -5024,8 +5022,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: be7ccecc4297f6b49ac1f88ec79c92f5, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1090839845}
+        m_MethodName: InitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5072,30 +5070,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072638665}
   m_CullTransparentMesh: 0
---- !u!114 &1072638670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072638665}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd89c8a72191370439fe19ebe10d054a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1072638671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072638665}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3a6782354a65bb4e8e4f954c5f7913a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1086252252
 GameObject:
   m_ObjectHideFlags: 0
