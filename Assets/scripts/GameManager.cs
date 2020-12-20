@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     public List<PlayerScript> Players = new List<PlayerScript>();
     public PlayerScript MyPlayer;
     PhotonView PV;
-
+    bool isGameStart;
     public GameObject playerPrefab; // 생성할 플레이어 캐릭터 프리팹
     // Start is called before the first frame update
     void Start()
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     void Update()
     {
         NumOfPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount + "/8";
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 8)
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 2&&!isGameStart)
         {
             GameStartBtn.gameObject.SetActive(true);
             GameStartBtn.interactable = true;
@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
         GameStartBtn.interactable = false;
         StartText.gameObject.SetActive(true);
         Destroy(StartText, 2);
+        isGameStart = true;
     }
 
     public void InitGame() {
