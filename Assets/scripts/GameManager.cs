@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
         StartWall2.SetActive(false);
         StartWall3.SetActive(false);
         StartWall4.SetActive(false);
+        GameStartBtn.gameObject.SetActive(false);
+        GameStartBtn.interactable = false;
         StartText.gameObject.SetActive(true);
         Destroy(StartText, 2);
     }
