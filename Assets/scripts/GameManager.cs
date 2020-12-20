@@ -78,7 +78,10 @@ public class GameManager : MonoBehaviourPunCallbacks, IPunObservable
     {
         NumOfPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount + "/8";
         if (PhotonNetwork.CurrentRoom.PlayerCount == 8)
+        {
+            GameStartBtn.gameObject.SetActive(true);
             GameStartBtn.interactable = true;
+        }
     }
 
     public void GameStart() {
